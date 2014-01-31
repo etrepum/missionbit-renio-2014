@@ -81,16 +81,16 @@
                     </ul>
                 </section>
                 <section>
-                    <video controls src="media/me-1992.mov" width="100%"/>
                     <!--
-                    <iframe width="420" height="315" src="//www.youtube.com/embed/ahM_70Fvckw" frameborder="0" allowfullscreen></iframe>
+                    <video controls src="media/me-1992.mov" width="100%"/>
                     -->
+                    <iframe class="stretch" width="420" height="315" src="//www.youtube.com/embed/ahM_70Fvckw" frameborder="0" allowfullscreen></iframe>
                 </section>
                 <section>
-                    <video controls src="media/spring-2014-hd.mov" width="100%"/>
                     <!--
-                    <iframe src="//player.vimeo.com/video/84698367?autoplay=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <video controls src="media/spring-2014-hd.mov" width="100%"/>
                     -->
+                    <iframe class="stretch" src="//player.vimeo.com/video/84698367" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </section>
                 <section class="philo">
                     <img src="img/photos/class-whiteboard-1.jpg" />
@@ -140,6 +140,7 @@
 		<script src="reveal.js/lib/js/head.min.js"></script>
 		<script src="reveal.js/js/reveal.min.js"></script>
 		<script>
+            /*
             function addPrefix(prefix) {
                 if (prefix === '') {
                     return (function (name) { return name });
@@ -159,6 +160,7 @@
                     setTimeout(el.play.bind(el), 2000);
                 }
             });
+            */
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -173,6 +175,7 @@
 					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				],
                 keyboard: {
+                    /*
                     32: function (e) {
                         Array.prototype.forEach.call(Reveal.getCurrentSlide().querySelectorAll('video'), function (el) {
                             el.pause();
@@ -183,6 +186,7 @@
                             }
                         });
                     }
+                    */
                 }
 			});
 		</script>
