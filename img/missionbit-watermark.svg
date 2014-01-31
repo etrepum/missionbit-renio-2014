@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="750px" height="650px" viewBox="0 0 750 650" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <title>missionbit-watermark</title>
+    <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="missionbit_logo_vertical_whiteonblack" sketch:type="MSLayerGroup" transform="translate(111.000000, 54.000000)" fill-opacity="0.05" fill="#000000">
+            <path d="M261.372877,54 L93.8210966,149.737798 L93,342.685997 L259.627123,440 L427.16041,344.162302 L428,151.210402 L261.372877,54 Z M405,173 L405,333.774832 L321.220961,380 L321.220961,260.365567 L260.363299,293.473882 L199.760566,261.116264 L199.760566,380 L116,333.774832 L116,174.486601 L258.87437,250.658282 L259.062796,250.295877 L259.251221,250.658282 L405,173 Z" id="Fill-4" sketch:type="MSShapeGroup"></path>
+            <path d="M274,44.5078293 L349.262379,0 L519.205748,96.1679081 L521,291.70722 L446.111269,336 L444.261525,140.850002" id="Fill-5" sketch:type="MSShapeGroup"></path>
+            <path d="M247,44.5078293 L171.733112,0 L1.79065936,96.1679081 L0,291.70722 L74.889518,336 L76.7393727,140.850002" id="Fill-6" sketch:type="MSShapeGroup"></path>
+            <path d="M91,363.735609 L91.3040226,451.051232 L261.015355,548 L430,449.88313 L429.695977,363 L261.026478,460.858113" id="Fill-7" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
