@@ -1,54 +1,126 @@
 <!doctype html>
 <html lang="en">
-
 	<head>
 		<meta charset="utf-8">
-
 		<title>Mission Bit @ Renaissance 2014</title>
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 		<link rel="stylesheet" href="reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="reveal.js/css/theme/default.css" id="theme">
-
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
-
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
-
+		<link rel="stylesheet" href="css/simple.css" id="theme">
 		<!--[if lt IE 9]>
 		<script src="reveal.js/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
-
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Mission Bit</h1>
+					<img src="img/color-horiz-logo.svg" class="logo-h1" />
 					<h3>Free Coding classes for public school students</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
 				</section>
-
+				<section>
+					<h1>What</h1>
+                    <ul>
+                        <li>501(c)(3) non-profit</li>
+                        <li>Free after school coding classes</li>
+                        <li>We work with the system, students get SFUSD elective credit</li>
+                        <li>Project based learning, more focused on practice than theory</li>
+                        <li>Not a trade school</li>
+                    </ul>
+				</section>
+				<section>
+					<h1>Why</h1>
+                    <ul>
+                        <li>Only 30% of SF public high schools have a CS class</li>
+                        <li>Many professionals want to share knowledge<br>
+                            &hellip; but not as a full-time educator</li>
+                        <li>Businesses can and should work with the community</li>
+                    </ul>
+				</section>
+                <section>
+                    <h1>How</h1>
+                    <ul>
+                        <li>One full-time lead instructor per class</li>
+                        <li>Utilize volunteers to provide more student support</li>
+                        <li>Partner with other non-profits and the district</li>
+                        <li>Recruit in schools to reach more diverse students</li>
+                        <li>Provide laptops for use in class</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Curriculum</h1>
+                    <h3>Spring 2014</h3>
+                    <ul>
+                        <li>3x Intro web dev (HTML, CSS, SVG, JS)</li>
+                        <li>1x Intermediate web dev (Ruby + Sinatra)</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Metrics</h1>
+                    <ul>
+                        <li>300% growth from Fall to Spring</li>
+                        <li>&gt;45 volunteer mentors signed up</li>
+                        <li>&gt;$25k raised from over 100 funders</li>
+                        <li>Enough student signups to handle another class or two!</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>$$$</h1>
+                    <ul>
+                        <li>Administrative overhead (background checks, insurance, &hellip;)</li>
+                        <li>Laptops &amp; maintenance</li>
+                        <li>Some lead instructor time is paid</li>
+                        <li>Souveniers (hoodies, t-shirts, etc.)</li>
+                        <li>Field trips and misc. hardware</li>
+                        <li>Hoping to hire a full-time GM to scale up</li>
+                        <li>Currently 100% funded by direct donation</li>
+                    </ul>
+                </section>
+                <section>
+                    <video controls src="media/me-1992.mov" width="100%"/>
+                    <!--
+                    <iframe width="420" height="315" src="//www.youtube.com/embed/ahM_70Fvckw" frameborder="0" allowfullscreen></iframe>
+                    -->
+                </section>
+                <section>
+                    <video controls src="media/spring-2014-hd.mov" width="100%"/>
+                    <!--
+                    <iframe src="//player.vimeo.com/video/84698367?autoplay=1" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    -->
+                </section>
+                <section>
+                    <h2>Thank you!</h2>
+                    <h3><a href="http://bit.ly/help-me-teach-sf-students">bit.ly/help-me-teach-sf-students</a></h3>
+                    <p>
+                        <a href="mailto:bob@missionbit.com">bob@missionbit.com</a> / 
+                        <a href="https://twitter.com/etrepum">@etrepum</a>
+                    </p>
+                </section>
 			</div>
-
 		</div>
-
 		<script src="reveal.js/lib/js/head.min.js"></script>
 		<script src="reveal.js/js/reveal.min.js"></script>
-
 		<script>
-
+            function addPrefix(prefix) {
+                if (prefix === '') {
+                    return (function (name) { return name });
+                } else {
+                    return (function (name) {
+                        return prefix + name.charAt(0).toUpperCase() + name.slice(1);
+                    });
+                }
+            }
+            var fsPrefixes = ['', 'webkit', 'moz', 'ms', 'o'].map(addPrefix).filter(function (f) {
+                return document[f('fullscreenElement')] !== undefined;
+            });
+            var fsPrefix = fsPrefixes[0] || function () { return undefined; };
+            document.addEventListener(fsPrefix('fullscreenchange').toLowerCase(), function (ev) {
+                var el = Reveal.getCurrentSlide().querySelector('video');
+                if (el && el === document[fsPrefix('fullscreenElement')]) {
+                    setTimeout(el.play.bind(el), 2000);
+                }
+            });
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -56,26 +128,25 @@
 				progress: true,
 				history: true,
 				center: true,
-
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
+				transition: 'none',
 				dependencies: [
 					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
+				],
+                keyboard: {
+                    32: function (e) {
+                        Array.prototype.forEach.call(Reveal.getCurrentSlide().querySelectorAll('video'), function (el) {
+                            el.pause();
+                            if (document[fsPrefix('fullscreenElement')]) {
+                                document[fsPrefix('exitFullscreen')]();
+                            } else {
+                                el[fsPrefix('requestFullscreen')]();
+                            }
+                        });
+                    }
+                }
 			});
-
 		</script>
-
 	</body>
 </html>
